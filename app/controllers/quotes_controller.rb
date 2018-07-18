@@ -11,7 +11,7 @@ class QuotesController < ApplicationController
     @quote = Quote.new(quote_params)
 
     if @quote.save
-      redirect_to "http://localhost:3000/quotes"
+      redirect_to quotes_path
     else
       render 'new'
     end
